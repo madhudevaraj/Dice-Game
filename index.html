@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        
+<!--Juery CDN-->
+        <script
+          src="https://code.jquery.com/jquery-2.2.4.min.js"
+          integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+          crossorigin="anonymous"></script>
+        
+<!-- Importing custom font from Google font & icon which will make interface look nice -->
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
+        <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+        
+        <link type="text/css" rel="stylesheet" href="style.css">
+        
+        <title>Roll-A-Dice</title>
+    </head>
+
+    <body>
+<!-- wrapper - Styling for the big white box-->
+        <div class="wrapper clearfix">
+<!--            player-0-panel=Styling for player 0 and 1 panel-->
+            <div class="player-0-panel">
+<!--                id is used as unique identifier to access player and score-->
+                <div class="player-name" id="name-0">Player 1</div>
+                <div class="player-score" id="score-0">43</div>
+<!--                Wrapper of player current red box-->
+                <div class="player-current-box">
+                    <div class="player-current-label">Current</div>
+                    <div class="player-current-score" id="current-0">11</div>
+                </div>
+            </div>
+<!--            player-1-panel=Styling for player 0 and 1 panel-->
+            <div class="player-1-panel">
+<!--                id is used as unique identifier to access player and score-->
+                <div class="player-name" id="name-1">Player 2</div>
+                <div class="player-score" id="score-1">72</div>
+                <div class="player-current-box">
+                    <div class="player-current-label">Current</div>
+                    <div class="player-current-score" id="current-1">0</div>
+                </div>
+            </div>
+            
+<!--3 buttons; <i> is used for ionic icons next to buttons - refer NOTES-->
+            <button class="btn-new"><i class="ion-ios-plus-outline"></i>New game</button>
+            <button class="btn-roll"><i class="ion-ios-loop"></i>Roll dice</button>
+            <button class="btn-hold"><i class="ion-ios-download-outline"></i>Hold</button>
+            
+            <img src="dice-5.png" alt="Dice" class="dice">
+<!--            To diplay Game Over when game gets over. Hence till then display=none-->
+            <div class="gameover" style="display:none;">Game Over</div>
+        </div>
+        
+<!--        Linking JS code page-->
+        <script src="app.js"></script>
+    </body>
+</html>
